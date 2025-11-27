@@ -13,13 +13,30 @@
     <div class="max-w-6xl mx-auto px-4 flex items-center gap-4">
       <img src="logoP.png" alt="Totowood Logo" class="w-14 h-14 object-contain rounded bg-white/5 p-1">
       <h1 class="text-2xl font-bold tracking-wide">Tableau de bord <span class="text-[var(--toto-beige)]">TOTOWOOD</span></h1>
-      <nav class="ml-auto flex gap-2 items-center">
+
+      <nav class="navbar ml-auto flex items-center relative">
+  <!-- Burger visible sur mobile -->
+  <button id="burger" class="block md:hidden px-3 py-2 text-[var(--toto-brown)] bg-[var(--toto-beige)] rounded">
+    &#9776;
+  </button>
+
+  <!-- Liens / boutons -->
+  <div id="nav-links" class="hidden md:flex flex-col md:flex-row gap-2 absolute md:static top-12 right-0 bg-white/90 md:bg-transparent p-4 md:p-0 rounded shadow md:shadow-none w-48 md:w-auto">
+    <a href="calendar.html" class="px-3 py-2 bg-[var(--toto-beige)] text-[var(--toto-brown)] rounded font-medium text-center md:text-left">Calendrier</a>
+    <button id="btn-export" class="px-3 py-2 bg-white/90 text-[var(--toto-brown)] rounded border text-center md:text-left">Exporter</button>
+    <button id="btn-import" class="px-3 py-2 bg-white/90 text-[var(--toto-brown)] rounded border text-center md:text-left">Importer</button>
+  </div>
+</nav>
+<!--
+      <nav class="navbar ml-auto flex gap-2 items-center">
         <a href="calendar.html" class="px-3 py-2 bg-[var(--toto-beige)] text-[var(--toto-brown)] rounded font-medium">Calendrier</a>
-        <!--Pas utile pour le moment. A voir pour la suite
-        <button id="btn-open-file" class="px-3 py-2 bg-white/90 text-[var(--toto-brown)] rounded border">Ouvrir / Créer JSON</button-->
+        Pas utile pour le moment. A voir pour la suite
+        <button id="btn-open-file" class="px-3 py-2 bg-white/90 text-[var(--toto-brown)] rounded border">Ouvrir / Créer JSON</button>
         <button id="btn-export" class="px-3 py-2 bg-white/90 text-[var(--toto-brown)] rounded border">Exporter</button>
         <button id="btn-import" class="px-3 py-2 bg-white/90 text-[var(--toto-brown)] rounded border">Importer</button>
-      </nav>
+      </nav>-->
+
+
     </div>
   </header>
 

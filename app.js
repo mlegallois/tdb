@@ -2,6 +2,14 @@
 const STORAGE_KEY = 'totowood-data-v1';
 let state = { data: [] };
 
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('nav-links');
+
+burger.addEventListener('click', () => {
+  navLinks.classList.toggle('hidden');
+});
+
+
 // Utils
 function nowISODate(){ return new Date().toISOString().slice(0,10); }
 function cryptoRandomId(){ return 'id-' + Math.random().toString(36).slice(2,9); }
