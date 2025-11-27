@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calendrier TOTOWOOD</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-[var(--toto-white)] text-[var(--toto-brown)] min-h-screen">
+  <header class="w-full bg-[var(--toto-brown)] text-white py-4 shadow-md">
+    <div class="max-w-6xl mx-auto px-4 flex items-center gap-4">
+      <img src="logoP.png" alt="Totowood Logo" class="w-14 h-14 object-contain rounded bg-white/5 p-1">
+      <h1 class="text-2xl font-bold tracking-wide">Calendrier <span class="text-[var(--toto-beige)]">TOTOWOOD</span></h1>
+      <nav class="ml-auto flex gap-2 items-center">
+        <a href="index.html" class="px-3 py-2 bg-[var(--toto-beige)] text-[var(--toto-brown)] rounded font-medium">Tableau</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-4">
+
+<div class="flex items-center justify-between mb-4">
+
+    <div class="flex gap-2">
+        <button id="prevMonth" class="px-3 py-2 bg-white rounded hover:bg-gray-300">← Mois précédent</button>
+        <button id="btnToday" class="px-3 py-2 bg-[#7A6745] text-white rounded hover:bg-[#6b5b3b]">
+            Aujourd’hui
+        </button>
+        <button id="nextMonth" class="px-3 py-2 bg-white rounded hover:bg-gray-300">Mois suivant →</button>
+    </div>
+
+    <h2 id="monthTitle" class="text-xl font-bold"></h2>
+
+</div>
+    
+
+    <div id="calendarWrap" class="bg-white rounded p-4 shadow">
+      <div class="grid grid-cols-7 gap-2 text-center font-semibold text-gray-600 mb-2">
+      </div>
+      <div id="calendar" class="grid grid-cols-7 gap-2"></div>
+    </div>
+  </main>
+
+  <!-- Shared modal (same as index, reused by app.js) -->
+  <div id="modal" class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4 z-50">
+    <div class="bg-white rounded-lg w-full max-w-2xl p-6 shadow-lg">
+      <h2 id="modal-title" class="text-xl font-semibold mb-4">Modification</h2>
+      <form id="request-form" class="space-y-3">
+        <input type="hidden" id="request-id" />
+        <div>
+          <label class="block text-sm font-medium">Date de réception</label>
+          <input id="receivedDate" type="date" class="mt-1 w-full border rounded px-3 py-2" required />
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Nom</label>
+          <input id="clientName" type="text" class="mt-1 w-full border rounded px-3 py-2" placeholder="Nom du client" required />
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Résumé</label>
+          <textarea id="summary" rows="3" class="mt-1 w-full border rounded px-3 py-2" placeholder="Bref résumé" required></textarea>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-sm font-medium">Statut</label>
+            <select id="status" class="mt-1 w-full border rounded px-3 py-2">
+              <option value="active">En cours</option>
+              <option value="pending">En attente</option>
+              <option value="future">À venir</option>
+              <option value="done">Terminé</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Rappel (jours)</label>
+            <input id="reminderDays" type="number" min="0" class="mt-1 w-full border rounded px-3 py-2" value="7" />
+          </div>
+        </div>
+        <div class="flex justify-between items-center pt-3">
+          <div class="text-sm text-gray-500">ID: <span id="show-id" class="font-mono text-xs"></span></div>
+          <div class="flex gap-2">
+            <button type="button" id="btn-delete" class="px-4 py-2 border rounded text-red-600 hidden">Supprimer</button>
+            <button type="button" id="btn-cancel" class="px-4 py-2 border rounded">Annuler</button>
+            <button type="submit" class="px-4 py-2 bg-[var(--toto-brown)] text-[var(--toto-beige)] rounded">Enregistrer</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="fixed right-4 bottom-4 hidden bg-[var(--toto-brown)] text-white px-4 py-2 rounded"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

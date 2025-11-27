@@ -1,0 +1,52 @@
+[
+  {
+    "id": "id-e54ko2l",
+    "receivedDate": "2025-11-28",
+    "clientName": "Maxime",
+    "summary": "Devis pour claustra",
+    "status": "pending",
+    "reminderDays": 7,
+    "updatedAt": "2025-11-27T09:21:04.899Z",
+    "createdAt": "2025-11-27T08:46:54.769Z"
+  },
+  {
+    "id": "id-qjezz3e",
+    "receivedDate": "2025-11-27",
+    "clientName": "Benjamin",
+    "summary": "Devis pour bureau",
+    "status": "future",
+    "reminderDays": 7,
+    "updatedAt": "2025-11-27T09:28:19.317Z",
+    "createdAt": "2025-11-27T09:28:19.317Z"
+  },
+  {
+    "id": "id-ve9x18t",
+    "receivedDate": "2025-11-29",
+    "clientName": "Ludo",
+    "summary": "Devis pour dressing",
+    "status": "pending",
+    "reminderDays": 9,
+    "updatedAt": "2025-11-27T09:29:58.440Z",
+    "createdAt": "2025-11-27T09:29:58.440Z"
+  },
+  {
+    "id": "id-lpy129x",
+    "receivedDate": "2025-11-27",
+    "clientName": "Kathleen",
+    "summary": "Devis pour chambre",
+    "status": "active",
+    "reminderDays": 10,
+    "updatedAt": "2025-11-27T09:30:42.214Z",
+    "createdAt": "2025-11-27T09:30:42.214Z"
+  },
+  {
+    "id": "id-ngzvwdi",
+    "receivedDate": "2025-11-27",
+    "clientName": "Antoine",
+    "summary": "Devis pour site internet",
+    "status": "active",
+    "reminderDays": 1,
+    "updatedAt": "2025-11-27T09:31:32.413Z",
+    "createdAt": "2025-11-27T09:31:32.413Z"
+  }
+]
